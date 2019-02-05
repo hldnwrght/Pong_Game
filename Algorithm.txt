@@ -1,0 +1,36 @@
+Algorithm:
+
+0. Set Up Server(when user enters start game):
+- set up the server
+- Then wait for two connections to begin
+
+1. Initialize the game:
+- Main menu for the game
+- 3 choices
+	a. Start Game
+	b. How To
+	c. Settings
+- Upon start up a name is chosen
+
+2. Set up Server:
+- Connect client to server
+- when connected correctly send flag to server and wait for return flag
+
+3. When 2 connections are made begin:
+- Once server recieves flags from clients then it exits the wait
+- Server sends a start game flag to the clients and the game begins
+
+4. Game begins:
+- Players names are displayed as well as their score.
+- The players start at opposite sides of the board, with the ball at the center.
+Note:
+- The scores and names are saved to each of the clients computers and the scores are only sent when the 
+user scores a point
+- The ball location and direction are sent as well as the location of the players paddle repeatedly.
+- upon scoring the users remain at their present location, the ball is centered and launches in the scored on users area
+in an upward direction.
+
+5. Game Ends:
+- When one player hits the max score (11) a flag is sent to the server say the game ends.
+- When the server recieves this it sends a game end flag to both clients.
+- The clients both close the connection and a kill signal is sent to the server.
